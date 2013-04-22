@@ -1,4 +1,4 @@
-tablesorter
+Tablesorter
 ===========
 
-Clone of https://github.com/Mottie/tablesorter.git
+A clone of https://github.com/Mottie/tablesorter.git, modified for use in Blackline GPS applications.
