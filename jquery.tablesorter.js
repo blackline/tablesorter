@@ -717,10 +717,10 @@
     ts.addParser({
         id: "href",
         is: function(s) {
-            return /^href="([^\'\"]+)/g;
+            return /href="([^\'\"]+)"/g;
         },
         format: function(s) {
-            $.trim(s.toLowerCase(s.replace(new RegExp(/href="([^\'\"]+)/g),"")));
+            return $.trim(s.replace(new RegExp(/href="([^\'\"]+)"/g),"").toLowerCase());
         },
         type: "text"
     });
