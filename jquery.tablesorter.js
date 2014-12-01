@@ -713,7 +713,18 @@
         },
         type: "text"
     });
-    
+
+    ts.addParser({
+        id: "href",
+        is: function(s) {
+            return /^href="([^\'\"]+)/g;
+        },
+        format: function(s) {
+            $.trim(s.toLowerCase(s.replace(new RegExp(/href="([^\'\"]+)/g),"")));
+        },
+        type: "text"
+    });
+
     ts.addParser({
         id: "digit",
         is: function(s,table) {
